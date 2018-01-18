@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JAVASCRIPT</title>
+        <meta charset="UTF-8"> 
+        <script>
+            function acendeLampada(){
+                document.getElementById("luz").src="image/lampada-acesa.jpg";
+            }
+            function apagaLampada(){
+                document.getElementById("luz").src="image/lampada-apagada.jpg";
+            }
+             function quebraLampada(){
+                document.getElementById("luz").src="image/lampada-quebrada.jpg";
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Acenda a lâmpada</h1>
+        <img src="image/lampada-apagada.jpg" id="luz" onmousemove="acendeLampada()" onmouseout="apagaLampada()" onclick="quebraLampada()"/>
+    
+    <!--'onclick' é ativado quando clicar | 'onmousemove' é ativado quando passar o mouse por cima-->
+    </body>
+</html>
+<!--<img src="image/lampada-acesa.jpg" /-->
