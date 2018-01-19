@@ -6,18 +6,10 @@
         <script>
             var quebrada = false;
             function mudaLampada(tipo) {
-                if (tipo == 1) {
-                    arquivo = "image/lampada-acesa.jpg";
-                }
-                if (tipo == 2) {
-                    arquivo = "image/lampada-apagada.jpg";
-                }
-                if (tipo == 3) {
-                    arquivo = "image/lampada-quebrada.jpg";
-                }
+
                 if (!quebrada) {
-                    document.getElementById("luz").src = arquivo;
-                    if (tipo == 3) {
+                    document.getElementById("luz").src = "image/" + tipo + ".jpg";
+                    if (tipo == 'lampada-quebrada') {
                         quebrada = true;
                     }
                 }
@@ -27,7 +19,7 @@
     </head>
     <body>
         <h1>Acenda a lâmpada</h1>
-        <img src="image/lampada-apagada.jpg" id="luz" onmousemove="mudaLampada(1)" onmouseout="mudaLampada(2)" onclick="mudaLampada(3)"/>
+        <img src="image/lampada-apagada.jpg" id="luz" onmousemove="mudaLampada('lampada-acesa')" onmouseout="mudaLampada('lampada-apagada')" onclick="mudaLampada('lampada-quebrada')"/>
 
         <!--'onclick' é ativado quando clicar | 'onmousemove' é ativado quando passar o mouse por cima-->
     </body>
