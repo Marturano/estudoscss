@@ -278,6 +278,7 @@ aside#lateral h2{
 footer#rodape{
     clear: both;
     border-top: 1px solid #606060;
+    font-size: 13px;
     /*padding-top: 15px;*/
 
 }

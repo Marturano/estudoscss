@@ -6,6 +6,7 @@
         <meta charset="UTF-8"/>
         <title>Tudo sobre Google Glass</title>
         <link rel="stylesheet" href="Aula 10 CSS.css"/>
+        <link rel="stylesheet" href="Aula 26-27 MULTIMIDIA-CSS.css"/>
 
         <!-- 'rgba' deixa transparênte-->
         <!-- 'background-image: url("Gradient.jpg");' imagem de fundo-->
@@ -21,21 +22,21 @@
                 <!--tudo que está entre "hgroup" é considerado um grupo de títulos-->
 
 
-                <img id="icone" src="image/glass-oculos-preto-peq.png"/>&nbsp;&nbsp;
+                <img id="icone" src="image/multimidia.png"/>&nbsp;&nbsp;
 
 
                 <nav id="Menu">
                     <h1>Menu Principal</h1>
                     <ul type="circle">
-                        <li onmouseover="mudaFoto('image/home.png')" onmouseout="mudaFoto('image/glass-oculos-preto-peq.png')"><a href="Aula 26-27.html">Home</a></li>
+                        <li onmouseover="mudaFoto('image/home.png')" onmouseout="mudaFoto('image/multimidia.png')"><a href="Aula 26-27.html">Home</a></li>
 
-                        <li onmouseover="mudaFoto('image/especificacoes.png')" onmouseout="mudaFoto('image/glass-oculos-preto-peq.png')"><a href="specs.html">Especificações</a></li>
+                        <li onmouseover="mudaFoto('image/especificacoes.png')" onmouseout="mudaFoto('image/multimidia.png')"><a href="specs.html">Especificações</a></li>
 
-                        <li onmouseover="mudaFoto('image/fotos.png')" onmouseout="mudaFoto('image/glass-oculos-preto-peq.png')"><a href="fotos.html">Fotos</a></li>
+                        <li onmouseover="mudaFoto('image/fotos.png')" onmouseout="mudaFoto('image/multimidia.png')"><a href="fotos.html">Fotos</a></li>
 
                         <li onmouseover="mudaFoto('image/multimidia.png')" onmouseout="mudaFoto('image/multimidia.png')"><a href="multimidia.html">Multimídia</a></li>
 
-                        <li onmouseover="mudaFoto('image/fale-conosco.png')" onmouseout="mudaFoto('image/glass-oculos-preto-peq.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+                        <li onmouseover="mudaFoto('image/fale-conosco.png')" onmouseout="mudaFoto('image/multimidia.png')"><a href="fale-conosco.html">Fale conosco</a></li>
 
                     </ul>
                 </nav>
@@ -55,11 +56,21 @@
                         </hgroup>
                     </header>
 
+                    <div id="tv-radio">
 
-                    Áudio e Vídeo
+                        <audio id="music" controls="controls">
+                            <source src="media/2009-lovers-carvings-bibio.mp3" type="audio/mpeg"/>
+                            <!--'type="audio/x-aac"' | 'type="audio/0gg' -->
+                            Desculpe, mas não foi possível carregar o áudio.
+                        </audio> 
 
-                    [AQUI ENTRA UM VÍDEO]
-                    [AQUI ENTRA UM ÁUDIO]
+                        <video id="movie" controls="controls" poster="media/video-mini03.jpg">
+                            <!--'type="video/mp4"' | 'type="video/webm' | 'type="video/ogg'-->
+                            <source src="media/getting-started.mp4" type="video/mp4">
+                            Desculpe, mas não foi possível carregar o vídeo.
+                        </video>
+                    </div>
+                    
                 </article>
             </section>
 

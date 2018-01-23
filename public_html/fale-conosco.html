@@ -26,13 +26,13 @@
                 <nav id="Menu">
                     <h1>Menu Principal</h1>
                     <ul type="circle">
-                        <li onmouseover="mudaFoto('image/home.png')" onmouseout="mudaFoto('image/glass-oculos-preto-peq.png')"><a href="Aula 26-27.html">Home</a></li>
+                        <li onmouseover="mudaFoto('image/home.png')" onmouseout="mudaFoto('image/fale-conosco.png')"><a href="Aula 26-27.html">Home</a></li>
 
-                        <li onmouseover="mudaFoto('image/especificacoes.png')" onmouseout="mudaFoto('image/glass-oculos-preto-peq.png')"><a href="specs.html">Especificações</a></li>
+                        <li onmouseover="mudaFoto('image/especificacoes.png')" onmouseout="mudaFoto('image/fale-conosco.png')"><a href="specs.html">Especificações</a></li>
 
-                        <li onmouseover="mudaFoto('image/fotos.png')" onmouseout="mudaFoto('image/glass-oculos-preto-peq.png')"><a href="fotos.html">Fotos</a></li>
+                        <li onmouseover="mudaFoto('image/fotos.png')" onmouseout="mudaFoto('image/fale-conosco.png')"><a href="fotos.html">Fotos</a></li>
 
-                        <li onmouseover="mudaFoto('image/multimidia.png')" onmouseout="mudaFoto('image/glass-oculos-preto-peq.png')"><a href="multimidia.html">Multimídia</a></li>
+                        <li onmouseover="mudaFoto('image/multimidia.png')" onmouseout="mudaFoto('image/fale-conosco.png')"><a href="multimidia.html">Multimídia</a></li>
 
                         <li onmouseover="mudaFoto('image/fale-conosco.png')" onmouseout="mudaFoto('image/fale-conosco.png')"><a href="fale-conosco.html">Fale conosco</a></li>
 
@@ -42,41 +42,64 @@
                 <!--(type="1" start="3")-> usado para modificar a numeração-->
                 <!-- Square, Circle, Disc-->
             </header>
-            
+
             <section id="corpoFull">
-                <article id="cabecalhoP">
-                Fale Conosco > Contato
-                Formulário de Contato
-                por Gustavo Guanabara
-                Atualizado em 01/Maio/2013
+                <article id="noticiaP">
+                    <header id="cabecalhoP">
+                        <hgroup>
+                            <h2>Fale Conosco > Contato</h2>
+                            <h1>Formulário de Contato</h1>  
+                            <h2>por Gustavo Guanabara</h2>
+                            <h3>Atualizado em 01/Maio/2013</h3>
+                        </hgroup><br>
+                    </header>
 
-                Identificação do Usuário
-                Nome:
-                Senha:
-                E-mail:
-                Sexo:
-                - Masculino
-                - Feminino
-                Data de Nascimento:
+                    <form method="post" id='fContact' action="mailto:samuebarbelli@gmail.com">
+                        <fieldset id='user'>
+                            <legend>Identificação do Usuário </legend>
+                            <p><label for='cName'>Nome:&nbsp;</label><input type='text' name='tName' id="cName" size="40" maxlength="40" placeholder=' Full Name'/></p> 
+                            <p><label for='cPass'>Senha:&nbsp;</label><input type='password' name='tPass' id="cPass" size="20" maxlength="12"  placeholder=' 6-12 characters'/></p> 
+                            <p><label for='cMail'>E-mail:&nbsp;</label><input type='email' name='tMail' id='cMail' size="40" maxlength="40" placeholder=' Valid Mail'/></p> 
+                            <fieldset id='sex'>
+                                <legend>Sexo:</legend>
+                                <input type='radio' name='tSex' id='cMasc'/><label for='cMasc'>Masculino</label>
+                                <input type='radio' name='tSex' id='cFem'/><label for='cFem'>Feminino</label>
+                            </fieldset>
+                            <p><label for="cDate">Data de Nascimento:&nbsp;</label><input type='date' name='tDate' id='cDate' size="20" maxlength="20"/></p>
+                        </fieldset>
 
-                Endereço do Usuário
-                Logradouro:
-                Número:
-                Estado:
-                Cidade:
+                        <fieldset id='address'>
+                            <legend> Endereço do Usuário</legend>
+                            <p><label for='cStreet'>Logradouro:&nbsp;</label><input type='text' name='tStreet' id='cStreet' size="20" maxlength="80" placeholder=' Rua/ Avenida/ Bairro'/></p> 
+                            <p><label for='cNum'>Número:&nbsp;</label><input type='number' name='tNum' id='cNum' min="0" max="99999"/></p>
+                            <p><label for='cCountry'>Estado:&nbsp;</label></p>
+                            <select name='tCountry' id='cCountry'>
+                                <option>Amazonas</option>
+                                <option>São Paulo</option>
+                                <option>Mato-Grosso</option>
+                                <option>Rio de Janeiro</option>
+                            </select>
 
-                Mensagem do Usuário
-                Grau de Urgência:
-                Mensagem:
+                            <p><label for='cCity'>Cidade:&nbsp;</label></p>
+                        </fieldset>
 
-                Quero um Google Glass
-                Gostaria de adquirir um Google Glass quando disponível
-                Cor:
-                Quantidade:
-                Preço Total: R$
+                        <fieldset id='mensage'>
+                            <legend> Mensagem do Usuário </legend>
+                            <p><label for='cCountry'>Grau de Urgência:&nbsp;</label></p>
+                            <p><label for='cCountry'>Mensagem:&nbsp;</label></p>
+                        </fieldset>
 
+                        <fieldset id='order'>
+                            <legend>Quero um Google Glass </legend>
+                            <p><label for='cOrder'>Gostaria de adquirir um Google Glass quando disponível&nbsp;</label></p>
+                            <p><label for='cColor'>Cor:&nbsp;</label></p>
+                            <p><label for='cAmount'>Quantidade:&nbsp;</label></p>
+                            <p><label for='cPrice'>Preço Total: R$&nbsp;</label></p>
+                        </fieldset>
 
-                [BOTÃO ENVIAR]
+                        [BOTÃO ENVIAR]
+                    </form>
+
                 </article>
             </section>
 
