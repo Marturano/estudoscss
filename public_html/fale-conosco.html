@@ -4,7 +4,8 @@
     <head>
         <meta charset="UTF-8"/>
         <title>Tudo sobre Google Glass</title>
-        <link rel="stylesheet" href="Aula 10 CSS.css"/>
+        <link rel="stylesheet" href="Aula 10 CSS.css"/> 
+        <link rel="stylesheet" href="Aula 26-27 FALE-CONOSCO CSS.css"/>
 
         <!-- 'rgba' deixa transparênte-->
         <!-- 'background-image: url("Gradient.jpg");' imagem de fundo-->
@@ -44,7 +45,7 @@
             </header>
 
             <section id="corpoFull">
-                <article id="noticiaP">
+                <article id="noticiaP2">
                     <header id="cabecalhoP">
                         <hgroup>
                             <h2>Fale Conosco > Contato</h2>
@@ -65,39 +66,66 @@
                                 <input type='radio' name='tSex' id='cMasc'/><label for='cMasc'>Masculino</label>
                                 <input type='radio' name='tSex' id='cFem'/><label for='cFem'>Feminino</label>
                             </fieldset>
-                            <p><label for="cDate">Data de Nascimento:&nbsp;</label><input type='date' name='tDate' id='cDate' size="20" maxlength="20"/></p>
+                            <p><label for="cDate">Data de Nascimento:&nbsp;</label><input type="date" name='tDate' id='cDate' size="20" maxlength="20"/></p>
                         </fieldset>
 
                         <fieldset id='address'>
                             <legend> Endereço do Usuário</legend>
                             <p><label for='cStreet'>Logradouro:&nbsp;</label><input type='text' name='tStreet' id='cStreet' size="20" maxlength="80" placeholder=' Rua/ Avenida/ Bairro'/></p> 
                             <p><label for='cNum'>Número:&nbsp;</label><input type='number' name='tNum' id='cNum' min="0" max="99999"/></p>
-                            <p><label for='cCountry'>Estado:&nbsp;</label></p>
-                            <select name='tCountry' id='cCountry'>
-                                <option>Amazonas</option>
-                                <option>São Paulo</option>
-                                <option>Mato-Grosso</option>
-                                <option>Rio de Janeiro</option>
-                            </select>
 
-                            <p><label for='cCity'>Cidade:&nbsp;</label></p>
+                            <p><label for='cCountry'>Estado:</label>
+                                <select name='tCountry' id='cCountry'>
+                                    <optgroup label="Região Sudeste">
+                                        <option value="SP" selected>São Paulo</option>        
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="MG">Minas Gerais</option>
+                                    </optgroup> 
+                                    <optgroup label="Região Nordeste">
+                                        <option value="AM">Amazonas</option>
+                                        <option value="PA">Pará</option>
+                                        <option value="RO">Rondônia</option>
+                                    </optgroup> 
+                                </select></p>
+
+                            <p><label for='cCity'>Cidade:</label>
+                                <input type="text" name="tCity" id="cCity" maxlength="40" size="20" placeholder="Sua Cidade" list="cities"/></p>
+                            <datalist id="cities">
+                                <option value="São Paulo"> </option>
+                                <option value="Ribeirão Preto"></option>
+                                <option value="Pirassunumga"> </option>
+                                <option value="Emilianópolis"> </option>
+                                <option value="Manaus"> </option>
+
+                            </datalist>
                         </fieldset>
 
                         <fieldset id='mensage'>
                             <legend> Mensagem do Usuário </legend>
-                            <p><label for='cCountry'>Grau de Urgência:&nbsp;</label></p>
-                            <p><label for='cCountry'>Mensagem:&nbsp;</label></p>
+                            <p><label for='cUrgency'>Grau de Urgência:&nbsp;&nbsp;&nbsp;</label>
+                                Min.<input type="range" class="barM" name="tUrgency" id="cUrgency" min="0" max="10" step="5"/>Max.</p>
+                            <p><label for='cMessage'>Mensagem:&nbsp;</label>
+                                <textarea name="tMessage" id="cMessage" cols="45" rows="5" placeholder="Deixe sua mensagem aqui!"></textarea></p>
                         </fieldset>
 
                         <fieldset id='order'>
                             <legend>Quero um Google Glass </legend>
-                            <p><label for='cOrder'>Gostaria de adquirir um Google Glass quando disponível&nbsp;</label></p>
-                            <p><label for='cColor'>Cor:&nbsp;</label></p>
-                            <p><label for='cAmount'>Quantidade:&nbsp;</label></p>
-                            <p><label for='cPrice'>Preço Total: R$&nbsp;</label></p>
+                            <p><input type="checkbox" name="tOrder" id="cOrder" checked/>
+                                <label for='cOrder'>Gostaria de adquirir um Google Glass quando disponível&nbsp;</label></p>
+
+                            <p><label for='cColor'>Cor:&nbsp;</label>
+                                <input type="color" name="tColor" id="cColor" value="#01579B"/></p>
+
+                            <p><label for='cAmount'>Quantidade:&nbsp;</label>
+                                <input type="number" name="tAmount" id="cAmount" min="0" max="5" value="0" oninput='calc_Total();'/></p>
+
+                            <p><label for='cPrice'>Preço Total: R$</label>
+                                <input type="text" name="tPrice" id="cPrice" placeholder="Total a pagar" readonly/></p>
                         </fieldset>
 
-                        [BOTÃO ENVIAR]
+                        <!--  <input type="submit" value="Enviar"/> -->
+                        &nbsp; &nbsp; <input type="image" src="image/botao-enviar.png" alt="enviar"/>
+
                     </form>
 
                 </article>
@@ -106,7 +134,7 @@
             <footer id="rodape">
                 <p>
                     Copyright &copy; 2013 &nbsp;-&nbsp; by Gustavo Guanabara </br>
-                    <a href="https://pt-br.facebook.com/">Facebook</a> |
+                    <a href="https://pt-br.facebook.com/">Facebook</a> | 
                     <a href="https://twitter.com/login?lang=pt">Twitter</a>
                 </p>
 
@@ -115,7 +143,9 @@
             <!--ASIDE= AREA LATERAL DO SITE-->
             <!--FOOTER= AREA DO RODAPE DA PAGINA-->
         </div>   
-
         <script language="javascript" src="Aula 25 JavaScript.js"></script>
+        <script>
+
+        </script>
     </body>
 </html>
